@@ -1,0 +1,501 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+html{ 
+    background: url("images/full_background.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+body{
+    overflow-x: hidden;
+    box-sizing: border-box;
+    
+
+}
+.loader{
+    position: fixed;
+    z-index: 99;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+}
+.loader.hidden{
+    animation: fadeout;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.loader img{
+    width: 100px;
+    animation: glow;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+
+}
+nav{
+    box-shadow: 5px 2px 5px rgb(153, 152, 152);
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    background: rgb(255, 217, 0);
+    display: flex;
+    height: 10vh;
+    align-content: space-around;
+    align-items: center;
+}
+.logo{
+    flex: 1;
+}
+.logo img{
+    position: relative;
+    margin-left: 20px;
+    width: 100px;
+    height: auto;
+    vertical-align: middle;
+}
+.nav_links{
+width: 40%;
+vertical-align: middle;
+}
+.nav_links ul{
+    margin: auto 20px auto 20px;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+.nav_links ul a{
+    text-decoration: none;
+}
+.nav_links ul a li{
+    color: rgb(250, 250, 250);
+    list-style: none;
+    font-style: italic;
+    font-size: 14px;
+
+}
+.nav_links ul a li:hover{
+
+
+}
+/*first scenery starting frpm here!!!*/ 
+
+.first_scene{
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    overflow: auto;
+    position: relative;
+    background-image: linear-gradient(rgb(0,0,0,0.5), rgb(0,0,0,0.5)), url(images/scene1.jpg);
+    padding-top: 7vw;
+    padding-bottom: 11vw;
+    margin-top: 10px;
+    transform: translateX(10%);
+    transition: .9s ease;
+    display: flex;
+}
+.first_scene.open{
+    transform: translateX(0%);
+}
+.banner_text{
+    flex: 1;
+}
+.banner_text h1{
+    position: relative;
+    font-size: 6vw;
+    text-align: center;
+    color: white;
+}
+.banner_text h3{
+    font-size: 4vw;
+    text-align: center;
+    color: white;
+}
+.social_media{
+    display: flex;
+    flex-direction: column;
+
+}
+.social_media a img{
+    width: 50px;
+    height: auto;
+    padding: 10px;
+}
+.my_company{
+    width: 80%;
+    height: 300px;
+    padding: 10px;
+    padding-top: 50px;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.659);    
+    box-shadow: 5px 2px 5px 2px rgb(153, 152, 152);
+    margin-bottom: 50px;
+    text-align: center;
+    animation: slide_up;   
+    animation-duration: 1s;
+    opacity: 0;
+    transition: 1s ease;
+    font-weight: 100;
+    font-style: italic;
+    stroke: black;
+    margin: auto;
+}
+.my_company.open{
+    transform: translate(9%,-90%);
+    opacity: 1;
+}
+.albert_quote{
+    font-size: 1.5vw;
+}
+.albert_img img{
+    width: 100px;
+    height: auto;
+}
+.second_scene_outer{
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    border-radius: 10px;
+    width: 95vw;
+    padding: 1rem;
+    position: relative;
+    background-color: rgba(157, 157, 157, 0.179);
+    padding: 3px;
+}
+.second_scene_inner{
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.522);
+    border-radius: 10px;
+    margin: auto;
+    height: 400px;
+    align-items: center;
+    overflow: hidden;
+
+}
+.second_left{
+    flex: 1;
+    animation: side_up;
+    animation-duration: 2s;
+    text-align: center;
+    margin: 0px 30px 0px 30px;
+    transition: 1s ease;
+
+}
+.second_left img{
+    width: 30vw;
+    height: auto;
+}
+.second_left h1{
+    color: darksalmon;
+}
+.second_right{
+    flex: 2;
+    text-align: center;
+    align-content: space-around;
+    height: 300px;
+    font-weight:100;
+    margin-right: 30px;
+    overflow: auto;    
+}
+
+.second_right p {
+    font-size: 22px ;
+    font-weight: lighter;
+    color: darkmagenta;
+
+}
+.second_right p{
+    padding: 100px 10px 10px 10px;
+    font-style: italic;
+
+}
+/*contact us CSS part*/
+.contact_us_outer{
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 10px;
+    margin-bottom: 100px;
+    width: 95vw;
+    padding: 1rem;
+    position: relative;
+    background-color: rgba(157, 157, 157, 0.179);
+    padding: 3px;
+
+}
+.contact_us_inner{
+    display: flex;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.522);
+    margin: auto;
+    height: auto;
+    padding: 50px;
+    align-items: center;
+    overflow: hidden;
+
+}
+.contact_us_inner div{
+    flex: 1;
+}
+.contact_us_inner form{
+    border: 2px solid greenyellow;
+    padding: 50px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+
+
+}
+#contact_name{
+    margin-top: 20px;
+    background-color: transparent;
+    border: 1px solid black;
+    color:black;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+.contact_form label{
+    margin-bottom: 20px;
+}
+.contact_form select{
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background: transparent;
+    height: 50px;
+}
+.contact_form textarea{
+    resize: none;
+    background: transparent;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    padding: 10px;
+    border: 1px black;
+}
+
+
+
+
+
+/*final scene */
+.final_scene{
+    overflow:hidden ;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    background: rgb(255, 217, 0);
+}
+.upper_hr{
+    display: flex;
+    align-content: space-around;
+
+}
+.upper_hr p{
+    flex: 1;
+    margin: 20px;
+}
+.upper_hr form{
+    margin: 20px;
+    border: 2px solid whitesmoke;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.upper_hr form textarea{
+    width: 350px;
+    background-color: transparent;
+    border: 1px solid whitesmoke;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+#input{
+    width: 350px;
+    margin-top: 20px;
+    background-color: transparent;
+    border: 1px solid whitesmoke;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+#feedback_button{
+    width: 300px;
+    border: 1px solid whitesmoke;
+    color:white;
+    background-color:skyblue ;
+    padding: 10px;
+    margin: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+
+}
+/* social media icons small*/
+
+.social_media_small{
+    width: 50vw;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    margin: auto;
+    margin-top: 0px;
+
+}
+.social_media_small a{
+    width:50%;
+}
+.social_media_small a img{
+    width: 40px;
+    height: auto;
+    margin: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.copy_right{
+    font-size: 14px;
+    text-align: center;
+    padding: 5px;
+}
+
+
+
+
+
+
+
+
+
+/*animations*/
+
+@keyframes slide_up{
+    from{
+    opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes fadeout{
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+@keyframes glow{
+    0%{
+        filter: drop-shadow(0px 0px 3px rgb(252, 255, 47));
+    }
+    100%{
+        filter: drop-shadow(0px 0px 3px rgb(47, 207, 255));
+
+    }
+}
+
+
+
+
+
+
+
+
+/*web supports*/
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color:black;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color:black;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: black;
+  }
+
+
+
+ /*media query*/
+ @media screen and (max-width: 960px) {
+     .nav_links{
+         display: none;
+     }
+    .my_company{
+        height: auto;
+    }
+    .albert_quote{
+        flex: 1;
+    }
+    .first_scene.open{
+        height: 40vh;
+    }
+
+
+
+
+
+ }
+ /*media query for mobile display */
+
+ @media screen and (max-width: 480px) {
+     .social_media{
+         display: none;
+     }
+     .my_company{
+         padding: 10px;
+         
+     }
+     .banner_text{
+         height: 20px;
+         padding-bottom: 0px;
+     }
+
+     .banner_text h1{
+        font-size: 8vw;
+     }
+     .first_scene{
+     }
+     .albert_quote{
+         font-size: 4vw;
+         color: chocolate;
+     }
+     .albert_img img{
+         width: 80px;
+     }
+     .second_scene_inner{
+         flex-direction: column;
+         display: flex;
+         height: auto;
+     }
+     .second_left img{
+         width: 60vw;
+     }
+     .second_left h1{
+         font-size: 5vw;
+     }
+     .second_right p{
+         font-size: 16px;
+         
+     }
+     .second_right p{
+         margin-top: 0px;
+         padding: 20px 10px 10px 10px;
+     }
+     .second_right{
+         margin-right: 0px;
+     }
+
+
+
+
+
+}
