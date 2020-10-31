@@ -246,7 +246,7 @@ vertical-align: middle;
     flex: 1;
 }
 .contact_us_inner form{
-    border: 2px solid blackq;
+    border: 2px solid black;
     padding: 50px;
     display: flex;
     text-align: center;
